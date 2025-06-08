@@ -1,0 +1,111 @@
+
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Base styles for the entire application */
+    body {
+        @apply bg-parchment text-espresso font-sans;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif;
+    }
+    
+    a {
+        @apply text-terracotta hover:text-latte;
+    }
+    
+    .book-card {
+        @apply transition-transform duration-300 ease-in-out shadow-lg hover:shadow-xl;
+    }
+    
+    .book-cover {
+        @apply transition-transform duration-300 ease-in-out;
+    }
+}
+
+@layer components {
+  /* Define custom components here if you have reusable patterns */
+}
+
+@layer utilities {
+    /* Custom utility classes */
+    .bg-parchment {
+        background-color: var(--color-parchment);
+    }
+    
+    .text-espresso {
+        color: var(--color-espresso);
+    }
+    
+    .font-serif {
+        font-family: var(--font-serif);
+    }
+    
+    .font-sans {
+        font-family: var(--font-sans);
+    }
+    
+    .text-latte {
+        color: var(--color-latte);
+    }
+    
+    .text-sage {
+        color: var(--color-sage);
+    }
+    
+    .text-terracotta {
+        color: var(--color-terracotta);
+    }
+}
+
+
+:root {
+    --color-parchment: #f9e6d0; /* Corrected typo: d0 instead of do */
+    --color-espresso: #3A2E24; /* Adjusted for contrast based on usage */
+    --color-latte: #D8C3A5;
+    --color-sage: #8A9B68;
+    --color-terracotta: #E07A5F;
+
+    --font-serif: "Cormorant Garamond", serif;
+    --font-sans: "Open Sans", sans-serif;
+}
+
+
+
+.book-card:hover .book-cover {
+    transform: rotateY(10deg) translateY(-8px);
+    box-shadow: 12px 12px 0px rgba(58, 46, 36, 0.2); 
+}
+
+.book-cover {
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-terracotta); 
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-espresso);
+    background-color: var(--color-parchment);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+}

@@ -2,6 +2,9 @@
 
 ## Color System
 
+##  Public link
+
+[Chapter&Sip ](https://chef-wambugu.vercel.app/)
 **Palette:**
 - **Parchment (`#f9e6d0`)**: Used as the main background for a warm, inviting feel.
 - **Espresso (`#3A2E24`)**: Primary text color for strong contrast and readability.
